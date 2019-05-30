@@ -1,0 +1,104 @@
+@media (max-width: 414px) {
+  body {
+    background-color: $white;
+  }
+
+  .pop-up {
+    height: 100%;
+    width: 100%;
+  }
+
+  .aside {
+    margin-top: 3.6rem;
+    margin-left: 5rem;
+
+    .p {
+      font-size: $f13;
+      width: 25rem;
+      text-align: left;
+    }
+    .h3 {
+      font-size: $f17;
+    }
+
+    .p-counter {
+      font-size: $f13;
+      margin: 0.5rem 0;
+    }
+
+    .p-green {
+      font-size: $f30;
+    }
+  }
+
+  .circles {
+    margin-left: -10rem;
+    margin-top: 9.3rem;
+    order: 1;
+    justify-content: space-around;
+
+    .shadow1 {
+      left: 2.6rem;
+    }
+
+    .shadow2 {
+      left: 12.9rem;
+    }
+
+    .shadow3 {
+      left: 21.6rem;
+    }
+
+    .shadow4 {
+      left: 29.9rem;
+    }
+  }
+}
+
+
+@media (max-width: 320px) {
+  .outer-tube {
+    margin-top: 1.2rem;
+  }
+  .aside {
+    margin-top: 0;
+
+    .p {
+      width: 15rem;
+    }
+
+    .counters {
+      margin-top: 1rem;
+      flex-direction: column;
+
+      .block {
+        max-width: 100%;
+      }
+
+      .block:first-child {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .circles {
+      margin-left: -13rem;
+      margin-top: 2rem;
+
+      .shadow1 {
+        left: 1.8rem;
+      }
+
+      .shadow2 {
+        left: 10.4rem;
+      }
+
+      .shadow3 {
+        left: 17.4rem;
+      }
+
+      .shadow4 {
+        left: 23.8rem;
+      }
+    }
+  }
+}

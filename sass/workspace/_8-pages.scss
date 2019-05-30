@@ -1,0 +1,62 @@
+body {
+  font-family: $nsc;
+  background-color: $marsh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pop-up {
+  height: 42rem;
+  width: 50rem;
+  background-color: $white;
+  border-radius: 0.5rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  .h1 {
+    margin: 2rem 0 0 3rem;
+  }
+  .form-close {
+    content: "+";
+    transform: rotate(45deg);
+    cursor: pointer;
+    color: $circle-color;
+    font-size: $f36;
+    margin-right: 1rem;
+  }
+}
+
+.main-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem 3rem 0 2rem;
+  position: relative;
+}
+
+.aside {
+  max-width: 70%;
+  margin-left: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .p:first-child {
+    margin-bottom: 1rem;
+  }
+}
+
+.counters {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  text-align: center;
+
+  .block {
+    max-width: 50%;
+  }
+}
+

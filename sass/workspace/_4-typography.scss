@@ -1,0 +1,44 @@
+.h1 {
+  font-size: $f26;
+  color: $dark-blue;
+  font-family: $nsp;
+  font-weight: bold;
+}
+.h3 {
+  text-transform: uppercase;
+  font-size: $f23;
+  color: $dark-blue;
+  font-family: $nsp;
+  font-weight: bold;
+}
+
+.p {
+  font-size: $f14;
+  color: $p-color;
+  line-height: 1.43;
+  text-align: justify;
+}
+
+.p-circle {
+  font-family: $nsp;
+  color: $dark-blue;
+  font-weight: bold;
+}
+
+.p-amount {
+  font-size: $f10;
+  color: $dark-blue;
+}
+
+.p-counter {
+  font-size: $f14;
+  text-transform: uppercase;
+  color: $p-color;
+}
+
+.p-green {
+  font-size: $f40;
+  color: $green;
+  font-family: $nsp;
+  font-weight: bold;
+}

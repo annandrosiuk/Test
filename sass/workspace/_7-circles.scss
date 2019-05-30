@@ -1,0 +1,148 @@
+.circles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 2.5rem;
+
+  .circle {
+    border-radius: 50%;
+    background-color: $circle-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    p {
+      z-index: 50;
+    }
+  }
+
+  .circle1 {
+    width: 8rem;
+    height: 8rem;
+    font-size: $f20;
+  }
+
+  .circle2 {
+    width: 7rem;
+    height: 7rem;
+    font-size: $f16;
+  }
+
+  .circle3 {
+    width: 6rem;
+    height: 6rem;
+    font-size: $f14;
+  }
+
+  .circle4 {
+    width: 5rem;
+    height: 5rem;
+    font-size: $f12;
+  }
+
+  //shadow under the circles
+  .shadow {
+    $offset: 0.4rem;
+    content: "";
+    background: $shadow;
+    position: absolute;
+    bottom: -($offset / 2);
+    border-radius: 80% / 100%;
+    height: $offset;
+  }
+  .shadow1 {
+    width: 5rem;
+    left: 1.5rem;
+  }
+
+  .shadow2 {
+    width: 4rem;
+    left: 11.4rem;
+  }
+
+  .shadow3 {
+    width: 4rem;
+    left: 19.6rem;
+  }
+
+  .shadow4 {
+    width: 3rem;
+    left: 27.5rem;
+  }
+
+  //green block which will rise up (animation)
+  .circle .circle-block {
+    position: absolute;
+    z-index: -10;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 105%;
+    background-color: $green-wave;
+  }
+
+  //group of circles (green/grey) which will move left (animation)
+  .circle .circle-block .circle-group {
+    position: absolute;
+    z-index: 30;
+    left: -1rem;
+    top: -0.5rem;
+  }
+  .circle .circle-block .circle-group .circle-item {
+    background-color: $green-wave;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 40;
+  }
+  .circle .circle-block .circle-group .circle-item:nth-child(1) {
+    left: 0;
+    top: 0;
+  }
+  .circle .circle-block .circle-group .circle-item:nth-child(2) {
+    left: 3.3rem;
+    top: -5rem;
+    background-color: $circle-color;
+  }
+  .circle .circle-block .circle-group .circle-item:nth-child(3) {
+    left: 6.6rem;
+    top: 0;
+  }
+  .circle .circle-block .circle-group .circle-item:nth-child(4) {
+    left: 9.9rem;
+    top: -5rem;
+    background-color: $circle-color;
+  }
+  .circle .circle-block .circle-group .circle-item:nth-child(5) {
+    left: 13.2rem;
+    top: 0;
+  }
+  .circle .circle-block .circle-group .circle-item:nth-child(6) {
+    left: 16.5rem;
+    top: -5rem;
+    background-color: $circle-color;
+  }
+
+  //classes for animation in js
+  .circle-group-animation {
+    -webkit-animation: moveleft 1s linear 0;
+    animation: moveleft 1s linear infinite;
+  }
+
+  .circle-block-animation {
+    -webkit-animation: moveup 8s linear 1 forwards;
+    animation: moveup 8s linear 1 forwards;
+  }
+
+  .z-index {
+    z-index: 10;
+  }
+
+  .green {
+    background-color: $green-wave;
+  }
+}

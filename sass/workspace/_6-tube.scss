@@ -1,0 +1,215 @@
+$rounding: 0 0 4rem 4rem / 0 0 4rem 4rem;
+$height: 32rem;
+$width: 6rem;
+$margin: 0.5rem;
+
+.outer-tube {
+  .tube {
+    width: $width;
+    height: $height;
+    position: relative;
+    margin: 1rem;
+    background: $tube-color;
+    border-radius: $rounding;
+    cursor: pointer;
+    overflow: hidden;
+
+    //grey color inside the tube
+    &__inner {
+      content: "";
+      border-radius: $rounding;
+      position: absolute;
+      left: 0.5rem;
+      width: $width - ($margin * 2);
+      height: 100%;
+      background: $tube-inner;
+    }
+
+    //water inside the tube
+    &__contents {
+      border-radius: $rounding;
+      background-image: linear-gradient(to top, $tube-gradient-from, $tube-gradient-to);
+      width: $width;
+      position: absolute;
+      bottom: 0;
+      z-index: 5;
+      left: 0;
+      right: 0;
+      top: 0;
+      transition: all 500ms ease-out;
+
+      //fishing float
+      &:before {
+        $offset: 1rem;
+        content: "0.75%";
+        color: $pink;
+        font-family: $nsp;
+        font-size: $f9;
+        font-weight: bold;
+        background: url("../img/group-5.png") no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        top: -($offset * 5);
+        left: 1.2rem;
+        height: 9.3rem;
+        width: 3.6rem;
+        z-index: 500;
+        animation: boat 3s ease-in-out infinite;
+        animation: boat-rotate 6s ease-in-out infinite;
+        animation: boat-reverse 4s ease-in-out infinite;
+        transform-origin: center;
+      }
+
+      //top of the water
+      &:after {
+        $offset: 1rem;
+        content: "";
+        background: $tube-top;
+        position: absolute;
+        top: -($offset / 2);
+        border-radius: 80% / 100%;
+        height: $offset;
+        width: $width;
+        border: 0.1rem solid rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+
+  //top line of the tube
+  &__contents-top {
+    $width: 6rem;
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    width: $width + 2rem;
+    height: 0.5rem;
+    background-color: $tube-color;
+    border-radius: 0.5rem;
+    z-index: 5;
+  }
+
+  //numbers inside the tube
+  &__number {
+    color: $white;
+    font-family: $nsp;
+    font-size: $f13;
+    font-weight: bold;
+    position: absolute;
+    z-index: 10;
+  }
+
+  &__number1 {
+    top: 3.53rem;
+    left: 3.2rem;
+  }
+
+  &__number2 {
+    top: 12rem;
+    left: 2.1rem;
+  }
+
+  &__number3 {
+    top: 19.5rem;
+    left: 2.6rem;
+  }
+
+  &__number4 {
+    top: 28.5rem;
+    left: 2rem;
+  }
+
+  //bubbles inside the tube
+  &__bulb {
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background-color: $white;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  &__bulb1 {
+    top: 7.6rem;
+    left: 3.2rem;
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  &__bulb2 {
+    top: 13.1rem;
+    left: 1.4rem;
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+  &__bulb3 {
+    top: 14.1rem;
+    left: 2.2rem;
+    width: 1rem;
+    height: 1rem;
+  }
+  &__bulb4 {
+    top: 18.07rem;
+    left: 4.33rem;
+    width: 0.43rem;
+    height: 0.43rem;
+  }
+  &__bulb5 {
+    top: 20.3rem;
+    left: 3.77rem;
+    width: 1.26rem;
+    height: 1.26rem;
+  }
+  &__bulb6 {
+    top: 23.03rem;
+    left: 3.77rem;
+    width: 0.76rem;
+    height: 0.76rem;
+  }
+
+  //measure lines with values
+  &__line {
+    content: "";
+    position: absolute;
+    left: 6rem;
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: $tube-line;
+    z-index: 30;
+
+    &:before {
+      $offset: 1rem;
+      content: "";
+      color: $dark-blue;
+      font-family: $nsp;
+      font-size: $f9;
+      font-weight: bold;
+      position: absolute;
+      top: -0.5rem;
+      left: 2rem;
+      width: 3.8rem;
+      z-index: 30;
+    }
+  }
+
+  &__line1 {
+    top: 5.8rem;
+
+    &:before {
+      content: "$10 000";
+    }
+  }
+  &__line2 {
+    top: 14.8rem;
+
+    &:before {
+      content: "$5 000";
+    }
+  }
+  &__line3 {
+    top: 25.8rem;
+
+    &:before {
+      content: "$1 000";
+    }
+  }
+}
